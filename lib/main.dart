@@ -1,3 +1,4 @@
+import 'package:dunkin_app/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, title: "Dunkin App");
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const Splashscreen(),
+    );
   }
 }
