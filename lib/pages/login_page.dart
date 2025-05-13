@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool checkItem = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,24 +20,28 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                Image.asset(
-                  'assets/logo.png',
-                  width: 150,
-                ),
-                const SizedBox(height: 40),
+                Image.asset('assets/logo.png', width: 250, height: 250),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    RichText(
-                      text: TextSpan(
-                        text: 'EMAIL',
-                        style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
-                        children: [
-                          TextSpan(
-                            text: ' *',
-                            style: TextStyle(color: Colors.red),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, bottom: 5),
+                      child: RichText(
+                        text: TextSpan(
+                          text: 'EMAIL',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
+                          children: [
+                            TextSpan(
+                              text: ' *',
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -41,16 +51,23 @@ class LoginPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    RichText(
-                      text: TextSpan(
-                        text: 'SENHA',
-                        style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
-                        children: [
-                          TextSpan(
-                            text: ' *',
-                            style: TextStyle(color: Colors.red),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, bottom: 5),
+                      child: RichText(
+                        text: TextSpan(
+                          text: 'SENHA',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
+                          children: [
+                            TextSpan(
+                              text: ' *',
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -60,33 +77,37 @@ class LoginPage extends StatelessWidget {
                 Row(
                   children: [
                     Checkbox(
-                      value: true,
-                      onChanged: (value) {},
+                      value: checkItem,
+                      onChanged: (value) {
+                        setState(() {
+                          checkItem = value!;
+                        });
+                      },
                       activeColor: Color(0xFFC44B8D),
                     ),
-                    Text(
-                      "Lembrar de mim",
-                      style: GoogleFonts.poppins(),
-                    ),
+                    Text("Lembrar de mim", style: GoogleFonts.poppins()),
                   ],
                 ),
                 const SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    RichText(
-                      text: TextSpan(
-                        text: "Esqueceu sua senha? ",
-                        style: GoogleFonts.poppins(color: Colors.black),
-                        children: [
-                          TextSpan(
-                            text: "Clique aqui.",
-                            style: GoogleFonts.poppins(
-                              color: Color(0xFFC44B8D),
-                              fontWeight: FontWeight.bold,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15, bottom: 5),
+                      child: RichText(
+                        text: TextSpan(
+                          text: "Esqueceu sua senha? ",
+                          style: GoogleFonts.poppins(color: Colors.black),
+                          children: [
+                            TextSpan(
+                              text: "Clique aqui.",
+                              style: GoogleFonts.poppins(
+                                color: Color(0xFFC44B8D),
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -94,9 +115,17 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 const SizedBox(height: 20),
-                buildButton("ACESSAR", Color(0xFFE38B3D)),
+                SizedBox(
+                  height: 50,
+                  width: 150,
+                  child: buildButton("ACESSAR", Color(0xFFE38B3D)),
+                ),
                 const SizedBox(height: 12),
-                buildButton("REGISTRAR", Color(0xFFC44B8D)),
+                SizedBox(
+                  height: 50,
+                  width: 150,
+                  child: buildButton("REGISTRAR", Color(0xFFC44B8D)),
+                ),
               ],
             ),
           ),
@@ -110,10 +139,7 @@ class LoginPage extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Text(
         text,
-        style: GoogleFonts.poppins(
-          fontWeight: FontWeight.bold,
-          fontSize: 14,
-        ),
+        style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14),
       ),
     );
   }
@@ -126,7 +152,10 @@ class LoginPage extends StatelessWidget {
         hintStyle: TextStyle(color: Colors.grey),
         filled: true,
         fillColor: Color(0xFFF2F2F2),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 18,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: BorderSide.none,

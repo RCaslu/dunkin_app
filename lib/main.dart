@@ -1,4 +1,4 @@
-import 'package:dunkin_app/splash_screen.dart';
+import 'package:dunkin_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Splashscreen(),
+      home: const LoginPage(),
     );
   }
 }
