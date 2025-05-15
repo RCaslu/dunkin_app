@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:dunkin_app/pages/register_page.dart';
-import 'package:dunkin_app/components/build_button.dart';
-import 'package:dunkin_app/components/build_input.dart';
+import 'package:dunkin_app/components/build/build_button.dart';
+import 'package:dunkin_app/components/build/build_input.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                Image.asset('assets/logo.png', width: 250, height: 250),
+                Image.asset('assets/pagelogo.png', width: 550, height: 150),
                 const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
