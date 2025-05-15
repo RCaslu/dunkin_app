@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:dunkin_app/pages/register_page.dart';
+import 'package:dunkin_app/components/build_button.dart';
+import 'package:dunkin_app/components/build_input.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -118,70 +121,35 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 50,
                   width: 150,
-                  child: buildButton("ACESSAR", Color(0xFFE38B3D)),
+                  child: buildButton(
+                    "ACESSAR",
+                    Color(0xFFE38B3D),
+                    onPressed: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => RegisterPage()),
+                      // );
+                      print("Acessar");
+                    },
+                  ),
                 ),
                 const SizedBox(height: 12),
                 SizedBox(
                   height: 50,
                   width: 150,
-                  child: buildButton("REGISTRAR", Color(0xFFC44B8D)),
+                  child: buildButton(
+                    "REGISTRAR",
+                    Color(0xFFC44B8D),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildLabel(String text) {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        text,
-        style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 14),
-      ),
-    );
-  }
-
-  Widget buildInput(String hint, {bool isPassword = false}) {
-    return TextField(
-      obscureText: isPassword,
-      decoration: InputDecoration(
-        hintText: hint,
-        hintStyle: TextStyle(color: Colors.grey),
-        filled: true,
-        fillColor: Color(0xFFF2F2F2),
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 18,
-        ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
-          borderSide: BorderSide.none,
-        ),
-      ),
-    );
-  }
-
-  Widget buildButton(String text, Color color) {
-    return SizedBox(
-      width: double.infinity,
-      height: 50,
-      child: ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: color,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
-        ),
-        child: Text(
-          text,
-          style: GoogleFonts.poppins(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-            color: Colors.white,
           ),
         ),
       ),
