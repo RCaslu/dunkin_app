@@ -24,7 +24,12 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                Image.asset('assets/pagelogo.png', width: 550, height: 150),
+                Image.asset(
+                  'assets/pagelogo.png',
+                  width: double.infinity,
+                  height: 130,
+                  fit: BoxFit.contain,
+                ),
                 const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,

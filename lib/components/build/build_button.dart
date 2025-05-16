@@ -14,7 +14,7 @@ import 'package:google_fonts/google_fonts.dart';
           ),
         ),
         child: Text(
-          text,
+          text.toUpperCase(),
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold,
             fontSize: 16,
