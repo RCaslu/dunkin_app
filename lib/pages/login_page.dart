@@ -1,3 +1,4 @@
+import 'package:dunkin_app/pages/verification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:dunkin_app/pages/register_page.dart';
@@ -125,11 +126,12 @@ class _LoginPageState extends State<LoginPage> {
                     "ACESSAR",
                     Color(0xFFE38B3D),
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => RegisterPage()),
-                      // );
-                      print("Acessar");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => VerificationPage(),
+                        ),
+                      );
                     },
                   ),
                 ),
