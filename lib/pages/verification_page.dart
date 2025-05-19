@@ -1,4 +1,5 @@
 import 'package:dunkin_app/components/build/build_button.dart';
+import 'package:dunkin_app/components/popups/show_confirmation_popup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -79,7 +80,7 @@ class VerificationPage extends StatelessWidget {
                         style: GoogleFonts.poppins(color: Colors.black),
                         children: [
                           TextSpan(
-                            text: "Reenviar.",
+                            text: 'Reenviar',
                             style: GoogleFonts.poppins(
                               color: Color(0xFFC44B8D),
                               fontWeight: FontWeight.bold,
@@ -100,10 +101,7 @@ class VerificationPage extends StatelessWidget {
                 "ENVIAR",
                 Color(0xFFE38B3D),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => VerificationPage()),
-                  );
+                  showConfirmationPopup(context);
                 },
               ),
             ),
