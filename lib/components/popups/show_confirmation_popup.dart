@@ -1,5 +1,7 @@
+import 'package:dunkin_app/components/build/build_button.dart';
 import 'package:dunkin_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 void showConfirmationPopup(BuildContext context) {
@@ -44,23 +46,18 @@ void showConfirmationPopup(BuildContext context) {
               ),
               SizedBox(height: 20),
               SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFE38B3D),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
+                height: 50,
+                width: 150,
+                child: buildButton(
+                  "Fechar",
+                  Colors.orange,
                   onPressed: () {
                     Navigator.pop(context);
-                    // Navigate to the next page or perform any action
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => HomePage()),
                     );
                   },
-                  child: Text("FECHAR", style: TextStyle(color: Colors.white)),
                 ),
               ),
             ],
