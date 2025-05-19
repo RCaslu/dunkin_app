@@ -1,3 +1,4 @@
+import 'package:dunkin_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -54,7 +55,10 @@ void showConfirmationPopup(BuildContext context) {
                   onPressed: () {
                     Navigator.pop(context);
                     // Navigate to the next page or perform any action
-                    // Navigator.pushReplacement(context, Home());
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
                   },
                   child: Text("FECHAR", style: TextStyle(color: Colors.white)),
                 ),
