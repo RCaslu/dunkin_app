@@ -1,8 +1,8 @@
 import 'package:dunkin_app/components/build/build_button.dart';
 import 'package:dunkin_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void showConfirmationPopup(BuildContext context) {
   showDialog(
@@ -35,13 +35,17 @@ void showConfirmationPopup(BuildContext context) {
               SizedBox(height: 20),
               Text(
                 "CONFIRMADO COM SUCESSO",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 10),
               Text(
                 "Seu número foi confirmado com sucesso.\nAgora você já pode aproveitar todos os recursos do app.",
-                style: TextStyle(color: Colors.grey[700]),
+                style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 20),
