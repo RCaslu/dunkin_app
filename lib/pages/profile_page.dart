@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components/navBar.dart'; // Adjust the path if needed
+// Adjust the path if needed
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -14,16 +14,10 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
+      backgroundColor: Colors.white,
       body: const Center(
-        child: Text(
-          'This is the Profile Page',
-          style: TextStyle(fontSize: 24),
-        ),
+        child: Text('This is the Profile Page', style: TextStyle(fontSize: 24)),
       ),
-      
     );
   }
 }
