@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../components/navbar.dart'; 
 
 class CuponsPage extends StatefulWidget {
   const CuponsPage({Key? key}) : super(key: key);
@@ -20,8 +19,10 @@ class _CuponsPageState extends State<CuponsPage> {
     ];
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Cupons'),
+        backgroundColor: Colors.white,
       ),
       body: ListView.builder(
         itemCount: cupons.length,
