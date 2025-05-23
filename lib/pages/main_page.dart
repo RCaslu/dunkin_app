@@ -1,4 +1,4 @@
-import 'package:dunkin_app/components/navBar.dart';
+import 'package:dunkin_app/components/nav_bar.dart';
 import 'package:dunkin_app/pages/cupons_page.dart';
 import 'package:dunkin_app/pages/home_page.dart';
 import 'package:dunkin_app/pages/profile_page.dart';
@@ -24,14 +24,15 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(child: pages[currentIndex]),
+      backgroundColor: Colors.white,
       bottomNavigationBar: CustomNavBar(
-      currentIndex: currentIndex,
-      onTap: (index) {
-    setState(() {
-      currentIndex = index;
-        });
-      },
-    ),
+        currentIndex: currentIndex,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }
