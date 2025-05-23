@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -31,17 +38,15 @@ class HomePage extends StatelessWidget {
             ),
             Center(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(
-                  20,
-                ), // Borda arredondada igual ao Figma
+                borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
                   'assets/promo.png',
-                  width: MediaQuery.of(context).size.width * 0.9, // Responsivo
+                  width: MediaQuery.of(context).size.width * 0.9,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Text(
@@ -64,7 +69,7 @@ class HomePage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 50),
+                  const SizedBox(width: 50),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
@@ -76,7 +81,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Text(
@@ -99,7 +104,7 @@ class HomePage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 50),
+                  const SizedBox(width: 50),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(

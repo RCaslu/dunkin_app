@@ -1,5 +1,6 @@
 import 'package:dunkin_app/components/build/build_button.dart';
 import 'package:dunkin_app/components/popups/show_confirmation_popup.dart';
+import 'package:dunkin_app/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -101,8 +102,11 @@ class VerificationPage extends StatelessWidget {
                 "ENVIAR",
                 Color(0xFFE38B3D),
                 onPressed: () {
-                  showConfirmationPopup(context);
-                },
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MainPage()),
+              );
+              },
               ),
             ),
           ],
