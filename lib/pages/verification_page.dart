@@ -4,6 +4,7 @@ import 'package:dunkin_app/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class VerificationPage extends StatelessWidget {
   const VerificationPage({super.key});
 
@@ -102,10 +103,8 @@ class VerificationPage extends StatelessWidget {
                 "ENVIAR",
                 Color(0xFFE38B3D),
                 onPressed: () {
-                Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const MainPage()),
-              );
+                showConfirmationPopup(context)
+              ;
               },
               ),
             ),

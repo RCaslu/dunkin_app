@@ -1,5 +1,6 @@
 import 'package:dunkin_app/components/build/build_button.dart';
 import 'package:dunkin_app/pages/home_page.dart';
+import 'package:dunkin_app/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -55,7 +56,7 @@ void showConfirmationPopup(BuildContext context) {
                     Navigator.pop(context);
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
+                      MaterialPageRoute(builder: (context) => MainPage()),
                     );
                   },
                 ),
