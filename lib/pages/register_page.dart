@@ -2,6 +2,7 @@ import 'package:dunkin_app/components/labeled_input.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:dunkin_app/components/build/build_button.dart';
+import 'package:dunkin_app/components/popups/privacy_policy_popup.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -134,7 +135,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   SizedBox(width: 5),
                   GestureDetector(
                     onTap: () {
-                      print("Política de privacidade");
+                      showPrivacyPolicyPopup(context);
                     },
                     child: SizedBox(
                       width: 200,
