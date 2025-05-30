@@ -24,12 +24,7 @@ class CustomNavBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.grey.shade200,
         borderRadius: BorderRadius.circular(40),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 2,
-          )
-        ],
+        boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -43,7 +38,7 @@ class CustomNavBar extends StatelessWidget {
               curve: Curves.easeInOut,
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: isSelected ? Colors.pink.shade200 : Colors.transparent,
+                color: isSelected ? Color(0xFFF20C90) : Colors.transparent,
                 shape: BoxShape.circle,
               ),
               child: Image.asset(

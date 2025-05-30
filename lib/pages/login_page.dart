@@ -146,7 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                   width: 150,
                   child: buildButton(
                     "REGISTRAR",
-                    Color(0xFFC44B8D),
+                    Color(0xFFF20C90),
                     onPressed: () {
                       Navigator.push(
                         context,
