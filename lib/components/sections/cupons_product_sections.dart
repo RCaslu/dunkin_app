@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../components/cards/cupons_product_card.dart';
+import '../cards/product_card.dart';
 
-Widget productsection(String columTitle) {
+Widget cuponsProductsection(String columTitle) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -23,10 +23,10 @@ Widget productsection(String columTitle) {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            cuponsProductCard(),
-            cuponsProductCard(),
-            cuponsProductCard(),
-            cuponsProductCard(),
+            productCard(),
+            productCard(),
+            productCard(),
+            productCard(),
           ],
         ),
       ),

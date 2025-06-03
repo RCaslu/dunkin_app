@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget cuponsProductCard() {
+Widget productCard() {
   return Padding(
     padding: const EdgeInsets.all(4.0),
     child: Card(

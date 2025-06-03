@@ -1,4 +1,4 @@
-import 'package:dunkin_app/sections/product_sections.dart';
+import 'package:dunkin_app/components/sections/cupons_product_sections.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -30,10 +30,10 @@ class _CuponsPageState extends State<CuponsPage> {
                   ),
                 ),
                 Divider(color: Colors.grey, thickness: 2, height: 20),
-                productsection("DONUTS"),
-                productsection("Gelados"),
-                productsection("Bebidas quentes"),
-                productsection("bakery"),
+                cuponsProductsection("DONUTS"),
+                cuponsProductsection("Gelados"),
+                cuponsProductsection("Bebidas quentes"),
+                cuponsProductsection("bakery"),
               ],
             ),
           ),
