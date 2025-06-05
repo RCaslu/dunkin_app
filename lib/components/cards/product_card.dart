@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget productCard() {
+Widget productCard(String imagePath) {
   return Padding(
     padding: const EdgeInsets.all(4.0),
     child: Card(
@@ -9,7 +9,7 @@ Widget productCard() {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Image.asset('assets/i1.png'),
+            Image.asset(imagePath),
             Text(
               "Ninho com avelã".toUpperCase(),
               style: GoogleFonts.poppins(

@@ -23,10 +23,10 @@ Widget cuponsProductsection(String columTitle) {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            productCard(),
-            productCard(),
-            productCard(),
-            productCard(),
+            productCard('assets/image.png'),
+            productCard('assets/image (1).png'),
+            productCard('assets/image (2).png'),
+            productCard('assets/image (3).png'),
           ],
         ),
       ),
