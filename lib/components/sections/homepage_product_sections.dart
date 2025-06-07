@@ -10,10 +10,10 @@ Widget homePageProductsection(String columTitle) {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            productCard('assets/image.png'),
-            productCard('assets/image (1).png'),
-            productCard('assets/image (2).png'),
-            productCard('assets/image (3).png'),
+            productCard('assets/image.png', "Tradicionais"),
+            productCard('assets/image (1).png', "Stick de pistache"),
+            productCard('assets/image (2).png', "6 Donuts"),
+            productCard('assets/image (3).png', "12 donuts"),
           ],
         ),
       ),
