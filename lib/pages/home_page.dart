@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              homePageProductsection("Donuts"),
+              homePageProductsection("Donuts", context: context),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 20),
@@ -72,7 +72,31 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              homePageProductsection("Bakery"),
+              homePageProductsection("Bakery", context: context),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Bebidas Quentes',
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              homePageProductsection("Bebidas Quentes", context: context),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Bebidas Geladas',
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              homePageProductsection("Gelados", context: context),
             ],
           ),
         ),

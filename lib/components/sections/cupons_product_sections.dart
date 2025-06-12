@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../cards/product_card.dart';
+import 'homepage_product_sections.dart';  // Import to access the productCategories map
 
-Widget cuponsProductsection(String columTitle) {
+Widget cuponsProductsection(String columTitle, {required BuildContext context}) {
+  final List<String> products = productCategories[columTitle.toUpperCase()] ?? [];
+
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -22,12 +25,7 @@ Widget cuponsProductsection(String columTitle) {
       SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          children: [
-            productCard('assets/image.png'),
-            productCard('assets/image (1).png'),
-            productCard('assets/image (2).png'),
-            productCard('assets/image (3).png'),
-          ],
+          children: products.map((imagePath) => productCard(imagePath, context: context)).toList(),
         ),
       ),
     ],
